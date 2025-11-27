@@ -19,6 +19,7 @@ void menu_item_2(void) {
     float freq;
     float R;
     float C;
+    float L;
     printf("what filter type are you building BAND PASS, LOW PASS, or HIGH PASS");
     fgets(FilterType, 100, stdin);
     if ('LOW PASS' || 'low pass' || 'Low Pass'){
@@ -35,8 +36,13 @@ void menu_item_2(void) {
         scanf("%fl",&R);
         C=1/2*3.142*freq*R;
         printf("you should use a %.2f F capacitor", C);
-        
-    
+    if ('BAND PASS' || 'band pass' || 'Band Pass'){
+        printf("what value do you want your centre frequency to be?");
+        scanf("%fl",&freq);
+        printf("whats your inductor value ");
+        scanf("%fl",&L);
+        C=1/(2*3.142*freq)*(2*3.142*freq)*L;
+        printf("you should use a %.2f F capacitor", C);
     
     }
 
