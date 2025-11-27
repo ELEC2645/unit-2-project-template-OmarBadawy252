@@ -3,13 +3,43 @@
 
 void menu_item_1(void) {
     printf("\n>> Menu 1\n");
-    printf("\nSome code here does something useful\n");
+    printf("\nOhm's Law Calculator\n");
+    float V;
+    float I;
+    float R;
+    
+    
     /* you can call a function from here that handles menu 1 */
 }
 
 void menu_item_2(void) {
     printf("\n>> Menu 2\n");
-    printf("\nSome code here does something useful\n");
+    printf("\nRC filter helper\n");
+    char FilterType;
+    float freq;
+    float R;
+    float C;
+    printf("what filter type are you building BAND PASS, LOW PASS, or HIGH PASS");
+    fgets(FilterType, 100, stdin);
+    if ('LOW PASS' || 'low pass' || 'Low Pass'){
+        printf("what value do you want your cut off frequency to be?");
+        scanf("%fl",&freq);
+        printf("whats your resistor value ");
+        scanf("%fl",&R);
+        C=1/2*3.142*freq*R;
+        printf("you should use a %.2f F capacitor", C);
+    if ('HIGH PASS' || 'high pass' || 'High Pass'){
+        printf("what value do you want your cut off frequency to be?");
+        scanf("%fl",&freq);
+        printf("whats your resistor value ");
+        scanf("%fl",&R);
+        C=1/2*3.142*freq*R;
+        printf("you should use a %.2f F capacitor", C);
+        
+    
+    
+    }
+
     /* you can call a function from here that handles menu 2 */
 }
 
