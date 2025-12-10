@@ -19,6 +19,7 @@ static int  is_integer(const char *s);  /* validate integer string */
 int main(void)
 {
     /* this will run forever until we call exit(0) in select_menu_item() */
+    printf("\n\nHey, i'm your AI assistant. Pick one of the menu items and explore my capabilities.\n\n");
     for(;;) {
         main_menu();
     }
@@ -100,10 +101,10 @@ static void print_main_menu(void)
     printf("\n----------- Main menu -----------\n");
     printf("\n"
            "\t\t\t\t\t\t\n"
-           "\t1. Menu item 1\t\t\n"
-           "\t2. Menu item 2\t\t\n"
-           "\t3. Menu item 3\t\t\n"
-           "\t4. Menu item 4\t\t\n"
+           "\t1. Ohm's Law\t\t\n"
+           "\t2. RC filter Design\t\t\n"
+           "\t3. DC-DC Converter\t\t\n"
+           "\t4. Quiz \t\t\n"
            "\t5. Exit\t\t\t\t\n"
            "\t\t\t\t\t\t\n");
     printf("---------------------------------------------\n");
@@ -138,4 +139,4 @@ static int is_integer(const char *s)
         s++;
     }
     return 1;
-}  
+}
